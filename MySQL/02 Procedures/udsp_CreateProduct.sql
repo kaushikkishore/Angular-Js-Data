@@ -10,14 +10,16 @@ Created procedure            19-DEC-14		Kaushik
 ---------------------------------------------------------------------------									
 Call	udsp_CreateProduct
 (
-	'My Topbar',
-	'1',
-	'{"Message": "Join Our Webinar", "LinkText": "Click Here", "LinkURL": "https://leadsquared.com", "BarColor": "eb593c", "TextColor": "ffffff", "ButtonColor": "000000", "ButtonTextColor": "ffffff"}',
-	'{"EntireWeb":true,"ExcludeUrls":[],"IncludeUrls":[]}',
-	'{"StartDate": "2014-10-17T10:09:24.167Z", "EndDate": "2014-10-17T10:09:24.167Z", "ExcludeDays": []}',
-	'0',
-	'1',
-	'a1826ffdec620b999a14c133610a19ad7d88117e22ff2a541a0b22fdfb6c7d8b'
+	'',
+	'Tata tea',
+	'LE-12-13',
+	'This is tea leaves',
+	'2014-12-20 15:10:04',
+	'9.00',
+	'19.95',
+	'tea',
+	'tea,leaves,grren tea',
+	'http://www.sanafela.com/science/fundamentals/fundamentals/skinny-on-tea-tree-oil_files/tealeaves.png'
 )								
 */									
 									
@@ -29,7 +31,7 @@ CREATE PROCEDURE udsp_CreateProduct
 (	
 	var_RequestorId			VARCHAR(100)			,
 	var_Name			  	NVARCHAR(100)			,			
-	var_Code			  	INT(11)	    			,			 
+	var_Code			  	VARCHAR(36)   			,			 
 	var_Description		  	TEXT CHARACTER SET utf8 ,			
 	var_ReleaseDate	  		DATETIME				,			
 	var_Cost   				NVARCHAR(100)			,			
@@ -57,7 +59,7 @@ BEGIN
 	-- --------------------------------------------------------------------------								
 	SET	var_RequestorId			= IFNULL(var_RequestorId,'');
 	SET	var_Name				= IFNULL(var_Name,'');
-	SET	var_Code				= IFNULL(var_Code,0);
+	SET	var_Code				= IFNULL(var_Code,'0');
 	SET	var_Description			= IFNULL(var_Description,'');
 	SET	var_ReleaseDate 		= IFNULL(var_ReleaseDate,'');
 	SET	var_Cost	    		= IFNULL(var_Cost,'');
