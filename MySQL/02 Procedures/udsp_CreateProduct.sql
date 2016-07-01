@@ -1,7 +1,7 @@
 /*									
 Name			:	udsp_CreateProduct								
 Description		: 	Creates a Product								
-Author			: 	Kaushik								
+Author			: 	KAUSHIk								
 									
 Modification Log: Change									
 ---------------------------------------------------------------------------									
